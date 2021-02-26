@@ -40,3 +40,48 @@ function swapNodes(list,data1,data2){
         node2Prev.setNextNode(node1)
     }
 }
+
+// --- Two Pointer Moving in Parallel ---
+
+// Create a fucntion that returns the nth last element of a singly linked list
+// Requires knowing how far from end you are. No easy way to iterate back once find end
+
+// Approach 1 - Store each node in an array as you iterate then call array[array.length-n]
+
+const arrayNthLast = (list, n) => {
+    const linkedListArray = []
+    let currentNode = list.removeHead()
+    while (currentNode){
+        linkedListArray.push(currentNode)
+        currentNode = currentNode.getNextNode()
+    }
+    return list[list.length - n]
+}
+
+// Approach 2 - Instead of creating entire parallel list, use 2 pointers at diff positions in list
+// but moving at the same rate
+
+// One pointer iterates through the entire list, but we'll also move a second pointer delayed steps
+//behind the lead pointer, so when it reaches the end its in position
+
+const findNthNode = (n) => {
+    nthLastNodePointer = null
+    tailPointer = this.head 
+    count = 0
+
+    while (tailPointer){
+        tailPointer = tailPointer.getNextNode()
+
+        if (count >= n){
+            if (nthLastNodePointer === null){
+                nthLastNodePointer = this.head
+            } else {
+                nthLastNodePointer = nthLastNodePointer.getNextNode()
+            }
+            count += 1
+        }
+        return nthLastNodePointer
+    }
+
+    
+}
