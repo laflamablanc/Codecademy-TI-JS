@@ -82,6 +82,10 @@ const findNthNode = (n) => {
         }
         return nthLastNodePointer
     }
-
-    
 }
+
+// --- Pointers at Different Speeds ---
+// Find the middle node of a linked list
+// 1st pointer takes 2 steps for every one 
+
+
