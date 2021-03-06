@@ -54,5 +54,13 @@ class HashMap {
     
   }
   
-  let myHashMap = new HashMap(3)
-  console.log(myHashMap.hash('id'))
+  module.exports = HashMap;
+  
+  let employees = new HashMap(3)
+  
+  employees.assign('34-567', 'Mara')
+  
+  console.log(employees.hashmap)
+  
+  console.log(employees.hashmap[employees.hash('34-567')])
+  
