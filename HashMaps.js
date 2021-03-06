@@ -29,3 +29,26 @@
 //   add the sum of the current character code
 //   value and hashCode to hashCode
 // return hashCode 
+
+// Compression Logic
+// use mod to make sure value of hashing function doesnt exceed array size
+
+class HashMap {
+    constructor(size = 0) {
+      this.hashmap = new Array(size)
+        .fill(null);
+    }
+  
+    hash(key) {
+      let hashCode = 0;
+      for (let i = 0; i < key.length; i++) {
+        hashCode += hashCode + key.charCodeAt(i);
+      }
+      return hashCode % this.hashmap.length;
+    }
+  }
+  
+  module.exports = HashMap;
+  
+  let myHashMap = new HashMap(3)
+  console.log(myHashMap.hash('id'))
