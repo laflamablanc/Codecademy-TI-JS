@@ -46,9 +46,13 @@ class HashMap {
       }
       return hashCode % this.hashmap.length;
     }
-  }
   
-  module.exports = HashMap;
+    assign(key, value){
+       const arrayIndex = this.hash(key)
+       this.hashmap[arrayIndex] = value
+    }
+    
+  }
   
   let myHashMap = new HashMap(3)
   console.log(myHashMap.hash('id'))
