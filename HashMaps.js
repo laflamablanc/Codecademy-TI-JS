@@ -33,34 +33,37 @@
 // Compression Logic
 // use mod to make sure value of hashing function doesnt exceed array size
 
-class HashMap {
-    constructor(size = 0) {
-      this.hashmap = new Array(size)
-        .fill(null);
-    }
+// class HashMap {
+//     constructor(size = 0) {
+//       this.hashmap = new Array(size)
+//         .fill(null);
+//     }
   
-    hash(key) {
-      let hashCode = 0;
-      for (let i = 0; i < key.length; i++) {
-        hashCode += hashCode + key.charCodeAt(i);
-      }
-      return hashCode % this.hashmap.length;
-    }
+//     hash(key) {
+//       let hashCode = 0;
+//       for (let i = 0; i < key.length; i++) {
+//         hashCode += hashCode + key.charCodeAt(i);
+//       }
+//       return hashCode % this.hashmap.length;
+//     }
   
-    assign(key, value){
-       const arrayIndex = this.hash(key)
-       this.hashmap[arrayIndex] = value
-    }
+//     assign(key, value){
+//        const arrayIndex = this.hash(key)
+//        this.hashmap[arrayIndex] = value
+//     }
     
-  }
+//   }
   
-  module.exports = HashMap;
+//   module.exports = HashMap;
   
-  let employees = new HashMap(3)
+//   let employees = new HashMap(3)
   
-  employees.assign('34-567', 'Mara')
+//   employees.assign('34-567', 'Mara')
   
-  console.log(employees.hashmap)
+//   console.log(employees.hashmap)
   
-  console.log(employees.hashmap[employees.hash('34-567')])
+//   console.log(employees.hashmap[employees.hash('34-567')])
+
+  // --- Using Linked Lists to Avoid Collisions --- 
+  
   
