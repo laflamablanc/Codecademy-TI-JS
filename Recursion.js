@@ -17,7 +17,9 @@ const iterativeFactorial = (n) => {
   }
   
   // Set fourFactorial
-  
+
+const fourFactorial = iterativeFactorial(4)  
+console.log(fourFactorial)
   
   
   module.exports = {
