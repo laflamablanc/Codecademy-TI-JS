@@ -10,7 +10,8 @@ class TreeNode {
       if (child.constructor.name === "TreeNode") {
         this.children.push(child)
       } else {
-  
+        const tree = new TreeNode(child)
+        this.children.push(tree)
       }
     }
   };
