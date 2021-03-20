@@ -17,6 +17,12 @@ If there are no parents left, that means we've moved the node all the way up to 
 and it will now become the root node (meaning its the smallest value in the whole tree).
 
 --Removing and Element: Heapify Down--
+If you want to remove the minimum value in a min-head (the root), you can't remove it directly
+because it would leave potentially both of its children orphaned. Instead, we swap it with the bottow row's
+rightmost child since that node will always be child-free. Then, we can remove the root node. 
+However, this now leaves our heap all out of order, so we must "Heapify Down" and send the new root node 
+downward in the heap until it is no longer larger than its children. 
+
 
 
 
