@@ -6,4 +6,17 @@ which will either be the max or min (again, depending on the type of heap) and i
 
 --Heap Representations--
 
-Min-heaps are binary trees
+Min-heaps are binary trees. Each node has at most 2 children
+Nodes are added from left to right until we've filled the entire level
+
+-- Adding an element: Heapify Up --
+Sometimes you add a node that violates the heap property (ex: smaller value than parent in a min-heap)
+To fix you must "Heapify Up" which means move that added node up in the heap until it is no longer
+smaller than its parent value.
+If there are no parents left, that means we've moved the node all the way up to the top of the tree
+and it will now become the root node (meaning its the smallest value in the whole tree).
+
+--Removing and Element: Heapify Down--
+
+
+
