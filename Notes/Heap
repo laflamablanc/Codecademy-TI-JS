@@ -4,4 +4,6 @@ Specifically, heaps are a type of binary tree, since each child node is either g
 its parent (depending on if it’s a max-heap or min-heap). They are efficient for accessing the root value, 
 which will either be the max or min (again, depending on the type of heap) and inserting new values.
 
-Heap Representations
+--Heap Representations--
+
+Min-heaps are binary trees
