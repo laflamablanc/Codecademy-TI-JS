@@ -13,6 +13,15 @@ class Graph {
     return newVertex;
   }
 
+  addEdge(vertexOne, vertexTwo){
+    if (vertexOne instanceof Vertex && vertexTwo instanceof Vertex ){
+      vertexOne.addEdge(vertexTwo)
+      vertexTwo.addEdge(vertexOne)
+    } else {
+      throw 'Vertex invalid!'
+    }
+  }
+
   removeVertex(vertex) {
     this.vertices = this.vertices.filter(v => v !== vertex);
   }
@@ -25,6 +34,8 @@ class Graph {
 const trainNetwork = new Graph();
 const atlantaStation = trainNetwork.addVertex('Atlanta');
 const newYorkStation = trainNetwork.addVertex('New York');
+
+trainNetwork.addEdge(atlantaStation, newYorkStation)
 
 trainNetwork.print();
 
