@@ -9,8 +9,18 @@ const partition = (array, leftIndex, rightIndex) => {
       while (array[rightIndex] > pivot) {
         rightIndex--;
       }
+      if (leftIndex <= rightIndex){
+        swap(array, leftIndex, rightIndex)
+        leftIndex++
+        rightIndex--
+      }
     }
+    return leftIndex
 }
+  
+  module.exports = {
+    partition
+  };
 
 
 const swap = (arr, indexOne, indexTwo) => {
