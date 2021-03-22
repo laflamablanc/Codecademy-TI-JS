@@ -51,10 +51,29 @@ X  0  1  0  1  0
 P  0  1  1  0  0
 T  0  1  0  0  0
 
+0 means no connection, while 1 means connection exists
+
 Here, A is connected to B 
 B is connected to A, X, P and T 
 P is connected to X and B 
 
+In a weighted graph, the table values would contain the weight values.
+
+2. Adjecency List
+Its a hash/object
+
+In an adjacency list, each vertex contains a list of the vertices where an edge exists. 
+To find an edge, one looks through the list for the desired vertex.
+
+The same graph as above as a list:
+
+{ 
+    A: [B],
+    B: [A, X, P, T],
+    X: [B, P],
+    P: [B, X],
+    T: [B]
+}
 
 
 
