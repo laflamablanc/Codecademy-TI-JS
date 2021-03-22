@@ -15,4 +15,20 @@ If two vertices do not have an edge between them, the graph is disconnected
 Edges default behavior is bi-directional, meaning if you can travel from NodeA to NodeB, you can also
 travel from NodeB to NodeA. 
 
+-- Weights --
+
+The shortest path between two vertices is not always the least expensive path.
+Edges can have weights associated with them, that make traveling the edge very expensive.
+Sometimes its better to travel along a less expensive edge and make multiple visits before ending at your
+destination node, than to travel directly to it, if the edge has a very expensive weight associated with it.
+
+-- Directed Graphs -- 
+
+Sometimes graphs have an associated direction with its edges, meaning its only possible to travel one specific
+way along it.
+
+For example, it may be possible to travel from NodeA to NodeB but not vice versa in some graphs. 
+If you can travel from NodeA -> NodeB, from NodeB -> NodeC and NodeC -> NodeA, that is called a CYCLE.
+
+
 
