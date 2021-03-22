@@ -1,0 +1,9 @@
+Graphs are the perfect data structure for medeling networks. 
+
+They are composed of nodes (vertices) which hold data, and edges which are a connection between 2 vertices.
+examples of graphs:
+- Maps with connection points between locations
+- Socail networks with friendships connecting people
+- Wireless networks with connections between computers and routers
+
+
