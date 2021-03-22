@@ -9,20 +9,20 @@ const mergeSort = (startArray) => {
     const rightArray = startArray.slice(mid, length);
   
     return merge(mergeSort(leftArray), mergeSort(rightArray))
-  }
+}
   
   const merge = (leftArray, rightArray) => {
     const sortedArray = [];
     while (leftArray.length > 0 && rightArray.length > 0) {
-      if (leftArray[0] < rightArray[0]) {
-        sortedArray.push(leftArray.shift());
-      } else {
-        sortedArray.push(rightArray.shift());
-      }
+        if (leftArray[0] < rightArray[0]) {
+            sortedArray.push(leftArray.shift());
+        } else {
+            sortedArray.push(rightArray.shift());
+        }
     }
     
     return sortedArray.concat(leftArray).concat(rightArray);
-  }
+}
   
   
   const inputArr = [3, 5, 2, 90, 4, 7];
