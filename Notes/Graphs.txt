@@ -30,5 +30,33 @@ way along it.
 For example, it may be possible to travel from NodeA to NodeB but not vice versa in some graphs. 
 If you can travel from NodeA -> NodeB, from NodeB -> NodeC and NodeC -> NodeA, that is called a CYCLE.
 
+-- Representing Graphs -- 
+
+2 ways:
+1) Adjacency List
+2) Adjacency Matrix
+
+1. Adjacency Matrix
+
+A table. 
+Across the top every vertex in the graph appears as a column.
+Down the side, every vertext appears again as a row.
+
+Every node is listed twice since edges can be bidirectional.
+
+   A  B  X  P  T 
+A  0  1  0  0  0
+B  1  0  1  1  1
+X  0  1  0  1  0 
+P  0  1  1  0  0
+T  0  1  0  0  0
+
+Here, A is connected to B 
+B is connected to A, X, P and T 
+P is connected to X and B 
+
+
+
+
 
 
