@@ -75,7 +75,18 @@ The same graph as above as a list:
     T: [B]
 }
 
+-- Key Terms -- 
 
+vertex - node
+edge - connection
+adjacent - edge exists between vertices
+path - a sequence of one or more edges between vertices
+disconnected - no path exists
+weighted - cost associated with edges
+directed - travel between vertices can be restricted to one direction
+cycle - a loops where you start and end at same vertex
+adjacency Matrix - graph represented as a table
+adjacency List - graph represented as a JS Object
 
 
 
