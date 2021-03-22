@@ -6,13 +6,16 @@ class Vertex {
     this.edges = [];
   }
 
-  addEdge(vertex){
+  addEdge(vertex) {
     if (vertex instanceof Vertex) {
-      const edge = new Edge(this, vertex)
-      this.edges.push(edge)
+      this.edges.push(new Edge(this, vertex));
     } else {
-      throw 'Vertex is not valid!'
+      throw new Error('Edge start and end must both be Vertex');
     }
+  }
+
+  removeEdge(vertex) {
+    this.edges = this.edges.filter(edge => edge.end !== vertex);
   }
 
   print() {
