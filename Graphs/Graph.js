@@ -6,6 +6,12 @@ class Graph {
     constructor(){
         this.vertices = [],
     }
+
+    addVertex(data){
+        const vertex = new Vertex(data)
+        this.vertices.push(vertex)
+        return vertex
+    }
   
     print() {
         const vertexList = this.vertices || [];
