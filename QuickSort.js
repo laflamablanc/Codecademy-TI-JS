@@ -17,10 +17,15 @@ const partition = (array, leftIndex, rightIndex) => {
     }
     return leftIndex
 }
-  
-  module.exports = {
-    partition
-  };
+
+const quicksort = (array, leftBound = 0, rightBound = array.length - 1) => {
+    if (leftBound < rightBound) {
+      const pivotIndex = partition(array, leftBound, rightBound);
+      quicksort(array, leftBound, pivotIndex - 1);
+      quicksort(array, pivotIndex, rightBound);
+    }
+    return array;
+}
 
 
 const swap = (arr, indexOne, indexTwo) => {
