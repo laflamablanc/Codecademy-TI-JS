@@ -13,17 +13,26 @@ class Graph {
     return newVertex;
   }
 
-  addEdge(vertexOne, vertexTwo){
-    if (vertexOne instanceof Vertex && vertexTwo instanceof Vertex ){
-      vertexOne.addEdge(vertexTwo)
-      vertexTwo.addEdge(vertexOne)
+  removeVertex(vertex) {
+    this.vertices = this.vertices.filter(v => v !== vertex);
+  }
+
+  addEdge(vertexOne, vertexTwo) {
+    if (vertexOne instanceof Vertex && vertexTwo instanceof Vertex) {
+      vertexOne.addEdge(vertexTwo);
+      vertexTwo.addEdge(vertexOne);
     } else {
-      throw 'Vertex invalid!'
+      throw new Error('Expected Vertex arguments.');
     }
   }
 
-  removeVertex(vertex) {
-    this.vertices = this.vertices.filter(v => v !== vertex);
+  removeEdge(vertexOne, vertexTwo) {
+    if (vertexOne instanceof Vertex && vertexTwo instanceof Vertex) {
+      vertexOne.removeEdge(vertexTwo);
+      vertexTwo.removeEdge(vertexOne);
+    } else {
+      throw new Error('Expected Vertex arguments.');
+    }
   }
 
   print() {
@@ -34,8 +43,6 @@ class Graph {
 const trainNetwork = new Graph();
 const atlantaStation = trainNetwork.addVertex('Atlanta');
 const newYorkStation = trainNetwork.addVertex('New York');
-
-trainNetwork.addEdge(atlantaStation, newYorkStation)
 
 trainNetwork.print();
 
