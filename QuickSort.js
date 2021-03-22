@@ -1,0 +1,1 @@
+//Quicksort is an efficient sorting algorithm that is based on the divide and conquer strategy.
