@@ -2,6 +2,10 @@ const Edge = require('./Edge.js');
 
 class Vertex {
   
+  constructor(data){
+    this.data = data,
+    this.edges = []
+  }
   
   print() {
     const edgeList = this.edges.map(edge =>
