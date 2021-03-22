@@ -1,9 +1,18 @@
 Graphs are the perfect data structure for medeling networks. 
 
+-- Intro -- 
 They are composed of nodes (vertices) which hold data, and edges which are a connection between 2 vertices.
 examples of graphs:
 - Maps with connection points between locations
 - Socail networks with friendships connecting people
 - Wireless networks with connections between computers and routers
+
+-- To Connect or Not to Connect -- 
+The highers the ratio of edges to vertices, the more connection in the graph
+
+If two vertices do not have an edge between them, the graph is disconnected
+
+Edges default behavior is bi-directional, meaning if you can travel from NodeA to NodeB, you can also
+travel from NodeB to NodeA. 
 
 
