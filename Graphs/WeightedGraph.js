@@ -2,8 +2,9 @@ const Edge = require('./Edge.js');
 const Vertex = require('./Vertex.js');
 
 class Graph {
-  constructor() {
+  constructor(isWeighted = false) {
     this.vertices = [];
+    this.isWeighted = isWeighted;
   }
 
   addVertex(data) {
@@ -17,10 +18,11 @@ class Graph {
     this.vertices = this.vertices.filter(v => v !== vertex);
   }
 
-  addEdge(vertexOne, vertexTwo) {
+  addEdge(vertexOne, vertexTwo, weight) {
+    const edgeWeight = this.isWeighted ? weight : null;
     if (vertexOne instanceof Vertex && vertexTwo instanceof Vertex) {
-      vertexOne.addEdge(vertexTwo);
-      vertexTwo.addEdge(vertexOne);
+      vertexOne.addEdge(vertexTwo, edgeWeight);
+      vertexTwo.addEdge(vertexOne, edgeWeight);
     } else {
       throw new Error('Expected Vertex arguments.');
     }
@@ -39,11 +41,3 @@ class Graph {
     this.vertices.forEach(vertex => vertex.print());
   }
 }
-
-const trainNetwork = new Graph();
-const atlantaStation = trainNetwork.addVertex('Atlanta');
-const newYorkStation = trainNetwork.addVertex('New York');
-
-trainNetwork.print();
-
-module.exports = Graph;
