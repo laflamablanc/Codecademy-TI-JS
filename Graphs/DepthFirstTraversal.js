@@ -1,14 +1,16 @@
 const testGraph = require('./testGraph.js');
 
 const depthFirstTraversal = (start, visitedVertices = [start]) => {
-    if (start.edges.length > 0){
-      const neighbor = start.edges[0].end
-      if (!visitedVertices.includes(neighbor)){
-        visitedVertices.push(neighbor)
-        depthFirstTraversal(neighbor, visitedVertices)
-      }
+  console.log(start.data);
+
+  start.edges.forEach((edge) => {
+    const neighbor = edge.end;
+
+    if (!visitedVertices.includes(neighbor)) {
+      visitedVertices.push(neighbor);
+      depthFirstTraversal(neighbor, visitedVertices);
     }
-  
+  });
 };
-  
-  depthFirstTraversal(testGraph.vertices[0]);
+
+depthFirstTraversal(testGraph.vertices[0]);
