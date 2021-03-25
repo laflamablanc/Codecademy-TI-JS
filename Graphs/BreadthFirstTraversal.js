@@ -1,6 +1,5 @@
-const Queue = require('./Queue.js');
+const Queue = require('../Queue.js');
 const testGraph = require('./testGraph.js');
-
 
 const breadthFirstTraversal = (start) => {
   const visitedVertices = [start];
