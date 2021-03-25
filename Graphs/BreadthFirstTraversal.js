@@ -1,4 +1,6 @@
 const Queue = require('./Queue.js');
+const testGraph = require('./testGraph.js');
+
 
 const breadthFirstTraversal = (start) => {
   const visitedVertices = [start];
@@ -18,4 +20,4 @@ const breadthFirstTraversal = (start) => {
   }
 };
 
-breadthFirstTraversal()
+breadthFirstTraversal(testGraph.vertices[0]);
