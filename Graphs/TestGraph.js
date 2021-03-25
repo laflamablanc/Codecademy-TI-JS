@@ -1,5 +1,7 @@
 const { Graph } = require('./Graph.js');
 
+console.log( Graph )
+
 const simpleGraph = new Graph(true, false);
 const startNode = simpleGraph.addVertex('v0.0.0');
 const v1 = simpleGraph.addVertex('v1.0.0');
