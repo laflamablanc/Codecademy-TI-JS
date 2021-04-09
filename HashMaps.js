@@ -51,7 +51,6 @@
 //        const arrayIndex = this.hash(key)
 //        this.hashmap[arrayIndex] = value
 //     }
-    
 //   }
   
 //   module.exports = HashMap;
